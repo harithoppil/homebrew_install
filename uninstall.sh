@@ -25,7 +25,8 @@ then
   abort 'Bash must not run in POSIX mode. Please unset POSIXLY_CORRECT and try again.'
 fi
 
-shopt -s extglob
+sh
+-s extglob
 
 strip_s() {
   local s
@@ -73,7 +74,7 @@ case "${un}" in
     ostype=macos
     if [[ "$(uname -m)" == "arm64" ]]
     then
-      homebrew_prefix_default=/opt/homebrew
+      homebrew_prefix_default="/Users/harithoppil/Library/Application Support/app.App-Fair/appfair-homebrew/Homebrew"
     else
       homebrew_prefix_default=/usr/local
     fi
